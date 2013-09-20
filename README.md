@@ -1,2 +1,1 @@
-Web Application for Equipment and Facilities Administrators in the I~Comm department.
-With this application they will be able to do various tasks related to their role.
+Web Application for the Equipment and Facilities reservation where administrators will manage the requests and be able to keep track of the rental status of the items
