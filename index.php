@@ -1,53 +1,31 @@
-<html>
+<?php
+	/**
+	*	The controller.
+	*	This file is the home of all control functions.
+	*	It also is the home file users will hit when they come to the domain.
+	*	From here the application will either:
+	*		1. Return to the View
+	*		2. Send a message to the model
+	*
+	*	@author Isaac Andrade
+	*	@author Guilherme Bentim
+	*	@author Ritchie Fitzgerald
+	*
+	*	@link byuicomm.net/icomm_equipments/
+	*
+	*	@version 1.0
+	*/
 
-<head></head>
+function site_hearder() {
+	if(file_exists('header.php')) {
+		require_once	
+	}
+	 
+}
 
-<body>
-	<header>
 
-		<div id="nav-menu">
-			<nav>
-				<ul>
-					<li>Admin Panel</li>
-					<li>New Equipment Request</li>
-					<li>New Facilities Request</li>
-					<li>Logout</li>
-				</ul>
-			</nav>
-		</div>
 
-		<div id="nav-tabs">
-			<nav>
-				<ul>
-					<li>Submitted</li>
-					<li>Approved</li>
-					<li>Rejected</li> <!-- Subcategories: Not Authorizes, No Equipment -->
-					<li>Prepared</li> <!-- Prepped -->
-					<li>Picked-up</li>
-					<li>Returned</li>
-				</ul>
-			</nav>
-		</div>
 
-		<div id="data-table">
-			<table>
-				<tr>
-					<th>Date Created</th>
-					<th>Reporter Name</th>
-					<th>Group</th>
-					<th>Requested Equipment</th>
-					<th>Chackout Date</th>
-					<th>Checkout Time</th>
-					<th>Checkin Date</th>
-					<th>Checkin Time</th>
-					<th>Comment</th>
-					<th>Status</th>
-				</tr>
-			</table>
-		</div>
 
-	</header>
-	<footer></footer>
-</body>
 
-</html>
+?>
