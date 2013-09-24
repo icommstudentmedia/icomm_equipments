@@ -25,6 +25,7 @@ html, body, body * {
 	border-radius: 5px 0 0 5px;
 	padding-top: 2px;
 	padding-bottom: 2px;
+	margin-top: 5px;
 }
 
 /* "clear" makes a break line that nullifies the effect of "float" used above */
@@ -35,6 +36,7 @@ html, body, body * {
 /* make it inline-block so #data-table's margin is applied against it instead of the top of the page */
 #header {
 	display: inline-block;
+	width: 100%;
 }
 
 #data-table {
