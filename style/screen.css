@@ -1,0 +1,56 @@
+html, body, body * {
+	margin: 0;
+	padding: 0;
+}
+
+#page-wrapper {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #d2d8dd;
+}
+
+#nav-menu nav ul li, #nav-tabs nav ul li {
+	list-style: none;
+	background-color: #9eaaed;
+	border-radius: 10px 10px 0 0;
+	float: left;
+	padding: 0 10px;
+	margin-top: 10px;
+	font-family: Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+
+#nav-menu #search-bar {
+	float: right;
+	border-radius: 5px 0 0 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+/* "clear" makes a break line that nullifies the effect of "float" used above */
+#nav-menu, #nav-tabs {
+	clear: both;
+}
+
+/* make it inline-block so #data-table's margin is applied against it instead of the top of the page */
+#header {
+	display: inline-block;
+}
+
+#data-table {
+	margin: 2px 0;
+}
+
+#data-table thead > * > *{
+	font-family: Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
