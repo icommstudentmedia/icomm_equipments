@@ -1,0 +1,39 @@
+.page-wrapper
+{
+	position: relative;
+	width: 17%;
+	padding: 5%;
+	margin: 5% auto;
+	border-radius: 10px;
+	border: 2px solid black;
+	background-color: #d2d8dd;
+}
+
+label
+{
+	float: left;
+	width: 73px;
+}
+
+.button
+{
+	padding: 5px 8px;
+}
+
+/*Use this for testing to see how things are displaying*/
+.border
+{
+	border: 1px solid black;
+}
+
+.controls
+{
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.clear-fix
+{
+	clear: both;
+}
