@@ -1,4 +1,15 @@
-<?php site_header() ?>
+<?php 
+	if (!isset($_SESSION)) 
+	{
+	  session_start();
+	}
+
+	include 'functions.php';
+
+	 if (logged_in())
+	{
+		get_header();
+?>
 				
 					<thead>
 						<tr>
@@ -16,4 +27,12 @@
 					</thead>
 
 
-<?php site_footer() ?>
+<?php 
+		get_footer();
+	}
+	else
+	{
+		header('Location: login.php');
+	}
+
+?>

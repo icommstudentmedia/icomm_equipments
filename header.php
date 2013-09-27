@@ -1,3 +1,9 @@
+<?php
+	if (!isset($_SESSION)) 
+	{
+		header('Location: login.php');
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +20,10 @@
 		<div id="header">
 	
 				<div id="nav-menu">
+				<h4>Welcome back <?php echo $_SESSION['username'];?>!</h4>
+					<form action="login.php" method="post">
+						<input name="logout" type="submit" value="Log Out">
+					</form>
 					<nav>
 						<ul>
 							<li>Admin Panel</li>
