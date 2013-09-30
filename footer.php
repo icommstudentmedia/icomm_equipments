@@ -5,9 +5,9 @@
 *	This file contains the HTML tags for the page footer.
 *   No information is currently being displayed, just the closing tags.
 *
-*	@author Isaac Andrade
-*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
-*	@author Ritchie Fitzgerald
+*	@author Isaac Andrade <isaac_nic@gmail.com>
+*	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
+*	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
 *
 *	@link byuicomm.net/icomm_equipments/  (footer)
 *
