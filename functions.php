@@ -77,7 +77,7 @@ function get_footer()
 function logged_in()
 {
 	// If these variables are not set the user is not logged in, so redirect to login.php.
-	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== true)
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true)
 	{
 		header('Location: login.php');
 	}

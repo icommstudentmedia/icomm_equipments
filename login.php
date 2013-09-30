@@ -40,9 +40,7 @@
 					<input name="submit" class="button" type="submit" value="Login">
 					<input type="reset" class="button" value="Clear">
 				</div>
-			</form>
-		</div>
-	</body>
+				<div class="center">	
 <?php
 
 $link = connect_to_db();             // Connects to Database
@@ -72,14 +70,19 @@ if (isset($_POST['submit']))         // When they press login it runs this.
 		else
 		{
 			// TODO Make this look nicer!!
-			echo "Username or Password Incorrect";
+			echo "<br><p class='fail'>Username or Password Incorrect</p>";
 		}
 	}
 	else
 	{
 		// TODO Make this look nicer!!
-		echo "failed";
+		echo "<br><p class='fail'>Username or Password Incorrect</p>";
 	}
 
 }
 ?>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
