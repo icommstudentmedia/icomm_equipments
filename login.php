@@ -1,4 +1,19 @@
 <?php
+/**
+*   login.php
+*	This file contains the HTML tags for the login page and
+*   also the functions calls to access the database and check the user and password.
+*   This will be the first page displayed.
+*
+*	@author Isaac Andrade
+*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
+*	@author Ritchie Fitzgerald
+*
+*	@link byuicomm.net/icomm_equipments/  (login page)
+*
+*	@version 1.0
+*/
+
 	session_start();
 	require_once("functions.php");
 

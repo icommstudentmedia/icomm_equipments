@@ -1,9 +1,25 @@
 <?php 
+/**
+*   home.php
+*	This file contains the HTML tags for the main content of the page.
+*
+*	@author Isaac Andrade
+*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
+*	@author Ritchie Fitzgerald
+*
+*	@link byuicomm.net/icomm_equipments/  (main content)
+*
+*	@version 1.0
+*/
+
+    //this statement checks if the user is logged in and has admnistrative rights to 
+    //access the information displayed
 	if (!isset($_SESSION)) 
 	{
 	  session_start();
 	}
 
+    //includes the functions in 'functions.php'
 	include 'functions.php';
 
 	 if (logged_in())

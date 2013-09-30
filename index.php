@@ -1,5 +1,6 @@
 <?php
 	/**
+	*   index.php
 	*	The controller.
 	*	This file is the home of all control functions.
 	*	It also is the home file users will hit when they come to the domain.
@@ -9,7 +10,7 @@
 	*		3. Get data from the model
 	*
 	*	@author Isaac Andrade
-	*	@author Guilherme Bentim
+	*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
 	*	@author Ritchie Fitzgerald
 	*
 	*	@link byuicomm.net/icomm_equipments/

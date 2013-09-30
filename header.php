@@ -1,4 +1,21 @@
 <?php
+/**
+*   header.php
+*	The page header file
+*	This file contains the HTML tags for the basic information about the users and equipments
+*   A table is used to organize the information in the header.
+*
+*	@author Isaac Andrade
+*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
+*	@author Ritchie Fitzgerald
+*
+*	@link byuicomm.net/icomm_equipments/  (header)
+*
+*	@version 1.0
+*/
+
+    //this statement checks if the user is logged in and has admnistrative rights to 
+    //access the information displayed
 	if (!isset($_SESSION)) 
 	{
 		header('Location: login.php');
@@ -45,7 +62,7 @@
 						<ul>
 							<li>Submitted</li>
 							<li>Approved</li>
-							<li>Rejected</li> <!-- Subcategories: Not Authorizes, No Equipment -->
+							<li>Rejected</li> <!-- Subcategories: Not Authorized, No Equipment -->
 							<li>Prepared</li> <!-- Prepped -->
 							<li>Picked-up</li>
 							<li>Returned</li>

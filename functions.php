@@ -8,12 +8,18 @@
 *	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
 *	@author Ritchie Fitzgerald
 *
-*	@link 
-*
 *	@version 1.0
 */
 
 
+/**
+*   Connect to Database
+*	This function connects to the mySql Database
+*
+*	@author Ritchie Fitzgerald
+*   @return string $link (link to the database) 
+*	@version 1.0
+*/
 function connect_to_db()
 {
 	define("DB_HOST", "127.0.0.1");
@@ -25,6 +31,16 @@ function connect_to_db()
 	return $link;
 }
 
+/**
+*   Password Encrypt
+*
+*
+*	@author Ritchie Fitzgerald
+*   @param string $password
+*   @return string $hash  
+*   @see http://php.net/manual/en/function.password-hash.php
+*	@version 1.0
+*/
 function password_encrypt($password)
 {
 	$hash_format = "$2y$10$";
@@ -34,6 +50,15 @@ function password_encrypt($password)
 	return $hash;
 }
 
+/**
+*   Generate Salt
+*
+*
+*	@author Ritchie Fitzgerald
+*   @return string $salt  
+*   @see http://www.php.net/manual/en/function.crypt.php
+*	@version 1.0
+*/
 function generate_salt()
 {
 	$unique_string = md5(uniqid(mt_rand(), true));
@@ -43,16 +68,26 @@ function generate_salt()
 	return $salt;
 }
 
+//includes the header.php file
 function get_header()
 {
 	include 'header.php';
 }
-
+//includes the footer.php file
 function get_footer()
 {
 	include 'footer.php';
 }
 
+/**
+*   Logged In
+*   This function is called several times to make sure that the user is
+*   logged in and has admnistrative rights to access the content.
+*
+*	@author Ritchie Fitzgerald
+*   @return boolean $_SESSION (true if logged in, false if not)  
+*	@version 1.0
+*/
 function logged_in()
 {
 	return (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true);
