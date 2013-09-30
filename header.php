@@ -14,7 +14,12 @@
 *	@version 1.0
 */
 
-	include 'functions.php';
+	require_once 'functions.php';
+
+	if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 	// If the user has not logged in redirect to login page.
 	logged_in();

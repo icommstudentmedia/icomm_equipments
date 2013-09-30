@@ -9,6 +9,17 @@
 	background-color: #d2d8dd;
 }
 
+.center
+{
+	text-align: center;
+}
+
+.fail
+{
+	color: red;
+	font-weight: bold;
+}
+
 label
 {
 	float: left;
