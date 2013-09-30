@@ -5,9 +5,9 @@
 *	This file contains the HTML tags for the basic information about the users and equipments
 *   A table is used to organize the information in the header.
 *
-*	@author Isaac Andrade
-*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
-*	@author Ritchie Fitzgerald
+*	@author Isaac Andrade <isaac_nic@gmail.com>
+*	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
+*	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
 *
 *	@link byuicomm.net/icomm_equipments/  (header)
 *

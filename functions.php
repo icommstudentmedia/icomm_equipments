@@ -4,7 +4,7 @@
 *	This file is the home of most back-end functions.
 *   It stores most of the functions used in other files in addition to pre-set wordpress functions.
 *
-*	@author Isaac Andrade
+*	@author Isaac Andrade <isaac_nic@gmail.com>
 *	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
 *	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
 *

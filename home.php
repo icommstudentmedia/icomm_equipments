@@ -3,9 +3,9 @@
 *   home.php
 *	This file contains the HTML tags for the main content of the page.
 *
-*	@author Isaac Andrade
-*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
-*	@author Ritchie Fitzgerald
+*	@author Isaac Andrade <isaac_nic@gmail.com>
+*	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
+*	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
 *
 *	@link byuicomm.net/icomm_equipments/  (main content)
 *

@@ -10,8 +10,8 @@
 	*		3. Get data from the model
 	*
 	*	@author Isaac Andrade
-	*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
-	*	@author Ritchie Fitzgerald
+	*	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
+	*	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
 	*
 	*	@link byuicomm.net/icomm_equipments/
 	*
