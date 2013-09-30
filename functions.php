@@ -1,5 +1,20 @@
 <?php
+/**
+ * FUNCTIONS.PHP
+ *
+ * Description: Contains functions that we will use for the rest of the site.
+ *
+ * @author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
+ * @author Isaac Andrade <>
+ * @author Guilherme Bentim <>
+ * 
+ */
 
+/**
+ * Connects and returns a link to the database.
+ * 
+ * @return connection The connection to the database.
+ */
 function connect_to_db()
 {
 	define("DB_HOST", "127.0.0.1");
@@ -11,6 +26,12 @@ function connect_to_db()
 	return $link;
 }
 
+/**
+ * Encrypts a given password.
+ * 
+ * @param  string $password New password for a user.
+ * @return string           This is the encrypted password that we would store in the database.
+ */
 function password_encrypt($password)
 {
 	$hash_format = "$2y$10$";
@@ -20,6 +41,11 @@ function password_encrypt($password)
 	return $hash;
 }
 
+/**
+ * Generates a random string of letters everysingle time.
+ * 
+ * @return string A random string of letters.
+ */
 function generate_salt()
 {
 	$unique_string = md5(uniqid(mt_rand(), true));
@@ -29,25 +55,31 @@ function generate_salt()
 	return $salt;
 }
 
+/**
+ * Display the header.
+ */
 function get_header()
 {
 	include 'header.php';
 }
 
+/**
+ * Display the footer.
+ */
 function get_footer()
 {
 	include 'footer.php';
 }
 
+/**
+ * Check to see if a user is logged in or not.
+ */
 function logged_in()
 {
-	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+	// If these variables are not set the user is not logged in, so redirect to login.php.
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== true)
 	{
-		return true;
-	}
-	else
-	{
-		return false;
+		header('Location: login.php');
 	}
 }
 

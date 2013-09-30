@@ -1,8 +1,10 @@
 <?php
-	if (!isset($_SESSION)) 
-	{
-		header('Location: login.php');
-	}
+
+	include 'functions.php';
+
+	// If the user has not logged in redirect to login page.
+	logged_in();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

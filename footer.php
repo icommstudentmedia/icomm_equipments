@@ -1,8 +1,9 @@
 <?php
-	if (!isset($_SESSION)) 
-	{
-	    header('Location: login.php');
-	}
+
+	include 'functions.php';
+
+	// If the user has not logged in redirect to login page.
+	logged_in();
 ?>				
 				</table>
 			</div> <!-- END of #data-table -->
