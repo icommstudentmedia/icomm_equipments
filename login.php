@@ -1,5 +1,4 @@
 <?php
-
 /**
  * LOGIN.PHP
  * 
@@ -8,6 +7,7 @@
  * not.
  *
  * @author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
+ * @link byuicomm.net/icomm_equipments/  (login page)
  */
 
 	session_start();                  // Start a new session.

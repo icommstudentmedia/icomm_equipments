@@ -1,4 +1,17 @@
 <?php 
+/**
+*   home.php
+*	This file contains the HTML tags for the main content of the page.
+*
+*	@author Isaac Andrade
+*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
+*	@author Ritchie Fitzgerald
+*
+*	@link byuicomm.net/icomm_equipments/  (main content)
+*
+*	@version 1.0
+*/
+
 
 	require_once 'functions.php';
 

@@ -1,20 +1,25 @@
 <?php
 /**
- * FUNCTIONS.PHP
- *
- * Description: Contains functions that we will use for the rest of the site.
- *
- * @author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
- * @author Isaac Andrade <>
- * @author Guilherme Bentim <>
- * 
- */
+*   FUNCTIONS.PHP
+*	This file is the home of most back-end functions.
+*   It stores most of the functions used in other files in addition to pre-set wordpress functions.
+*
+*	@author Isaac Andrade
+*	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
+*	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
+*
+*	@version 1.0
+*/
+
 
 /**
- * Connects and returns a link to the database.
- * 
- * @return connection The connection to the database.
- */
+*   Connect to Database
+*	This function connects to the mySql Database and returns a link
+*
+*	@author Ritchie Fitzgerald
+*   @return string $link (link to the database) 
+*	@version 1.0
+*/
 function connect_to_db()
 {
 	define("DB_HOST", "127.0.0.1");
@@ -27,11 +32,15 @@ function connect_to_db()
 }
 
 /**
- * Encrypts a given password.
- * 
- * @param  string $password New password for a user.
- * @return string           This is the encrypted password that we would store in the database.
- */
+*   Password Encrypt
+*   Encrypts a given password
+*
+*	@author Ritchie Fitzgerald
+*   @param string $password (New password for a user)
+*   @return string $hash  (New encrypted password that we would store in the database)
+*   @see http://php.net/manual/en/function.password-hash.php
+*	@version 1.0
+*/
 function password_encrypt($password)
 {
 	$hash_format = "$2y$10$";
@@ -42,10 +51,14 @@ function password_encrypt($password)
 }
 
 /**
- * Generates a random string of letters everysingle time.
- * 
- * @return string A random string of letters.
- */
+*   Generate Salt
+*   Generates a random string of letters everysingle time.
+*
+*	@author Ritchie Fitzgerald
+*   @return string $salt  (A random string of letters.)
+*   @see http://www.php.net/manual/en/function.crypt.php
+*	@version 1.0
+*/
 function generate_salt()
 {
 	$unique_string = md5(uniqid(mt_rand(), true));
@@ -55,6 +68,7 @@ function generate_salt()
 	return $salt;
 }
 
+
 /**
  * Display the header.
  */
@@ -62,7 +76,6 @@ function get_header()
 {
 	include 'header.php';
 }
-
 /**
  * Display the footer.
  */
@@ -72,8 +85,13 @@ function get_footer()
 }
 
 /**
- * Check to see if a user is logged in or not.
- */
+*   Logged In
+*   This function is called several times to make sure that the user is
+*   logged in and has admnistrative rights to access the content.
+*
+*	@author Ritchie Fitzgerald 
+*	@version 1.0
+*/
 function logged_in()
 {
 	// If these variables are not set the user is not logged in, so redirect to login.php.
