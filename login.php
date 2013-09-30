@@ -50,7 +50,7 @@ if (isset($_POST['submit']))         // When they press login it runs this.
 	$username = mysqli_real_escape_string($link, $_POST['username']);
 	$password = $_POST['password'];
 
-	$query = "SELECT * FROM admins WHERE username='{$username}'";
+	$query = "SELECT * FROM admins WHERE username='$username'";
 	$result = mysqli_query($link, $query);
 
 	if ($row = mysqli_fetch_assoc($result))
