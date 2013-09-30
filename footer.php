@@ -15,12 +15,10 @@
 */
 
 
-    //this statement checks if the user is logged in and has admnistrative rights to 
-    //access the information displayed
-	if (!isset($_SESSION)) 
-	{
-	    header('Location: login.php');
-	}
+	include 'functions.php';
+
+	// If the user has not logged in redirect to login page.
+	logged_in();
 ?>				
 				</table>
 			</div> <!-- END of #data-table -->

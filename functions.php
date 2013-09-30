@@ -1,12 +1,12 @@
 <?php
 /**
-*   functions.php
+*   FUNCTIONS.PHP
 *	This file is the home of most back-end functions.
 *   It stores most of the functions used in other files in addition to pre-set wordpress functions.
 *
 *	@author Isaac Andrade
-*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
-*	@author Ritchie Fitzgerald
+*	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
+*	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
 *
 *	@version 1.0
 */
@@ -14,7 +14,7 @@
 
 /**
 *   Connect to Database
-*	This function connects to the mySql Database
+*	This function connects to the mySql Database and returns a link
 *
 *	@author Ritchie Fitzgerald
 *   @return string $link (link to the database) 
@@ -33,11 +33,11 @@ function connect_to_db()
 
 /**
 *   Password Encrypt
-*
+*   Encrypts a given password
 *
 *	@author Ritchie Fitzgerald
-*   @param string $password
-*   @return string $hash  
+*   @param string $password (New password for a user)
+*   @return string $hash  (New encrypted password that we would store in the database)
 *   @see http://php.net/manual/en/function.password-hash.php
 *	@version 1.0
 */
@@ -52,10 +52,10 @@ function password_encrypt($password)
 
 /**
 *   Generate Salt
-*
+*   Generates a random string of letters everysingle time.
 *
 *	@author Ritchie Fitzgerald
-*   @return string $salt  
+*   @return string $salt  (A random string of letters.)
 *   @see http://www.php.net/manual/en/function.crypt.php
 *	@version 1.0
 */
@@ -68,12 +68,17 @@ function generate_salt()
 	return $salt;
 }
 
-//includes the header.php file
+
+/**
+ * Display the header.
+ */
 function get_header()
 {
 	include 'header.php';
 }
-//includes the footer.php file
+/**
+ * Display the footer.
+ */
 function get_footer()
 {
 	include 'footer.php';
@@ -84,13 +89,16 @@ function get_footer()
 *   This function is called several times to make sure that the user is
 *   logged in and has admnistrative rights to access the content.
 *
-*	@author Ritchie Fitzgerald
-*   @return boolean $_SESSION (true if logged in, false if not)  
+*	@author Ritchie Fitzgerald 
 *	@version 1.0
 */
 function logged_in()
 {
-	return (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true);
+	// If these variables are not set the user is not logged in, so redirect to login.php.
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== true)
+	{
+		header('Location: login.php');
+	}
 }
 
 ?>

@@ -1,23 +1,19 @@
 <?php
 /**
-*   login.php
-*	This file contains the HTML tags for the login page and
-*   also the functions calls to access the database and check the user and password.
-*   This will be the first page displayed.
-*
-*	@author Isaac Andrade
-*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
-*	@author Ritchie Fitzgerald
-*
-*	@link byuicomm.net/icomm_equipments/  (login page)
-*
-*	@version 1.0
-*/
+ * LOGIN.PHP
+ * 
+ * Description: Controls the user logging in and logging out. Also sets the 
+ * session variable to let other pages know whether the user has logged in or
+ * not.
+ *
+ * @author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
+ * @link byuicomm.net/icomm_equipments/  (login page)
+ */
 
-	session_start();
+	session_start();                  // Start a new session.
 	require_once("functions.php");
 
-	if (isset($_POST['logout']))
+	if (isset($_POST['logout']))      // When the user clicks on log off run this.
 	{
 		session_destroy();
 	}
@@ -48,9 +44,10 @@
 		</div>
 	</body>
 <?php
-$link = connect_to_db();
 
-if (isset($_POST['submit']))
+$link = connect_to_db();             // Connects to Database
+
+if (isset($_POST['submit']))         // When they press login it runs this.
 {
 	$username = mysqli_real_escape_string($link, $_POST['username']);
 	$password = $_POST['password'];
@@ -60,9 +57,12 @@ if (isset($_POST['submit']))
 
 	if ($row = mysqli_fetch_assoc($result))
 	{
+		// Password are encrypted, so to compare passwords we crypt the
+		// new password with the old one to compare.
 		$set_password = $row['password'];
 		$input_password = crypt($password, $set_password);
 
+		// If they are the same set the session variable, and redirect them.
 		if ($input_password == $set_password)
 		{
 			$_SESSION['loggedin'] = true;
@@ -71,11 +71,13 @@ if (isset($_POST['submit']))
 		}
 		else
 		{
+			// TODO Make this look nicer!!
 			echo "Username or Password Incorrect";
 		}
 	}
 	else
 	{
+		// TODO Make this look nicer!!
 		echo "failed";
 	}
 
