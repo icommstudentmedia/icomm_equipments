@@ -1,4 +1,18 @@
 <?php
+/**
+*   functions.php
+*	This file is the home of most back-end functions.
+*   It stores most of the functions used in other files in addition to pre-set wordpress functions.
+*
+*	@author Isaac Andrade
+*	@author Guilherme Bentim (guilherme.guizmo@gmail.com)
+*	@author Ritchie Fitzgerald
+*
+*	@link 
+*
+*	@version 1.0
+*/
+
 
 function connect_to_db()
 {
@@ -41,14 +55,7 @@ function get_footer()
 
 function logged_in()
 {
-	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true);
 }
 
 ?>
