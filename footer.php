@@ -27,7 +27,34 @@
 ?>				
 				</table>
 			</div> <!-- END of #data-table -->
-	
+
+			<div id="NewUser" class="add-user">
+				<h4 class="center">Add User</h4>
+				<br>
+				<form action="login.php" method="post" onsubmit="return verifyPassword()">
+					<label for="adduser">New Username:</label>
+					<input name="adduser" type="text" required>
+					<br>
+					<br>
+					<div class="clear-fix"></div>
+					<label for="addpassword">New Password:</label>
+					<input name="addpassword" type="password" required>
+					<br>
+					<br>
+					<div class="clear-fix"></div>
+					<label for="verifypassword">Verify Password:</label>
+					<input name="verifypassword" type="password" required>
+					<br>
+					<br>
+					<p id="failedpassword" class='fail hide center'>Passwords don't match!!</p>
+					<br>
+					<div class="clear-fix"></div>
+					<div class="controls">
+						<input name="addsubmit" class="button" type="submit" value="Add User">
+						<input type="reset" class="button" value="Clear">
+					</div>
+				</form>
+			</div>
 		<div id="footer">
 			<!-- Here we are going to put info about the service and the I~Comm Department -->
 		</div>

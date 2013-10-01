@@ -48,6 +48,54 @@ html, body, body * {
 	font-size: 0.8em;
 }
 
+.add-user
+{
+	width: 17%;
+	padding: 5%;
+	border: 2px solid black;
+	background-color: #d2d8dd;
+
+	position: absolute;
+	display: none;
+	box-shadow: 0 0 20px #000000;
+	top: 5%;
+	left: 36.5%;
+	z-index: 9;
+}
+
+.clear-fix
+{
+	clear: both;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.button
+{
+	padding: 5px 6px;
+}
+
+.hide
+{
+	display: none;
+}
+
+.fail
+{
+	color: red;
+	font-weight: bold;
+}
+
+.controls
+{
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+}
+
 table {
 	border-collapse: collapse;
 }

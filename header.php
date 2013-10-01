@@ -32,6 +32,32 @@
 	<meta charset="utf-8"/>
 	<title>Equipment/Facilities</title>
 	<link rel="stylesheet" href="style/screen.css">
+	<script type="text/javascript">
+			function showDiv()
+			{
+				document.getElementById('NewUser').style.display = "block";
+			}
+			function hideDiv()
+			{
+				document.getElementById('NewUser').style.display = "none";
+			}
+			function verifyPassword()
+			{
+				var password = document.getElementsByName('addpassword')[0].value;
+				var verify = document.getElementsByName('verifypassword')[0].value;
+
+				if (password == verify)
+				{
+					hideDiv();
+					return true;
+				}
+				else
+				{
+					document.getElementById('failedpassword').style.display = "block";
+					return false;
+				}
+			}
+		</script>
 </head>
 
 <body>
@@ -43,8 +69,9 @@
 				<div id="nav-menu">
 				<h4>Welcome back <?php echo $_SESSION['username'];?>!</h4>
 					<form action="login.php" method="post">
-						<input name="logout" type="submit" value="Log Out">
+						<input name="logout" type="submit" class="button" value="Log Out">
 					</form>
+					<button class="button" onclick="showDiv()">Add Admin</button>
 					<nav>
 						<ul>
 							<li>Admin Panel</li>
@@ -54,7 +81,7 @@
 							<li id="search-bar">
 								<form method="get" action="">
 									<input type="text" name="search-text" />
-									<button>Search</button>
+									<button class="button">Search</button>
 								</form>
 							</li>
 						</ul>

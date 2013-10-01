@@ -17,23 +17,25 @@
 	{
 		session_destroy();
 	}
+
+	$link = connect_to_db();          // Connects to Database
 ?>
 <!DOCTYPE html>
 <html lang="eng">
 	<head>
 		<title>Login</title>
-		<link rel="stylesheet" type="text/css" href="style/screen.css">
 		<link rel="stylesheet" type="text/css" href="style/login.css">
+		<link rel="stylesheet" type="text/css" href="style/screen.css">
 	</head>
 	<body>
 		<div class="page-wrapper">
 			<form action="" method="post">
-				<label for="username">Username:</label>
-				<input name="username" type="text">
+				<label for="username" class="login">Username:</label>
+				<input name="username" type="text" required>
 				<div class="clear-fix"></div>
 				<br>
-				<label for="password">Password:</label>
-				<input name="password" type="password">
+				<label for="password" class="login">Password:</label>
+				<input name="password" type="password" required>
 				<div class="clear-fix"></div>
 				<br>
 				<div class="controls">
@@ -42,8 +44,6 @@
 				</div>
 				<div class="center">	
 <?php
-
-$link = connect_to_db();             // Connects to Database
 
 if (isset($_POST['submit']))         // When they press login it runs this.
 {
@@ -69,13 +69,11 @@ if (isset($_POST['submit']))         // When they press login it runs this.
 		}
 		else
 		{
-			// TODO Make this look nicer!!
 			echo "<br><p class='fail'>Username or Password Incorrect</p>";
 		}
 	}
 	else
 	{
-		// TODO Make this look nicer!!
 		echo "<br><p class='fail'>Username or Password Incorrect</p>";
 	}
 
@@ -86,3 +84,15 @@ if (isset($_POST['submit']))         // When they press login it runs this.
 		</div>
 	</body>
 </html>
+<?php
+	if (isset($_POST['addsubmit']))
+	{
+		$addUsername = mysqli_real_escape_string($link, $_POST['adduser']);
+		$addPassword = mysqli_real_escape_string($link, $_POST['addpassword']);
+
+		$addPassword = password_encrypt($addPassword);
+
+		$query = "INSERT INTO admins (username, password) VALUES ('$addUsername', '$addPassword')";
+		mysqli_query($link, $query);
+	}
+?>

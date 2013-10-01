@@ -9,42 +9,14 @@
 	background-color: #d2d8dd;
 }
 
-.center
-{
-	text-align: center;
-}
-
-.fail
-{
-	color: red;
-	font-weight: bold;
-}
-
-label
+.login
 {
 	float: left;
 	width: 73px;
-}
-
-.button
-{
-	padding: 5px 8px;
 }
 
 /*Use this for testing to see how things are displaying*/
 .border
 {
 	border: 1px solid black;
-}
-
-.controls
-{
-	width: 50%;
-	text-align: center;
-	margin: 0 auto;
-}
-
-.clear-fix
-{
-	clear: both;
 }
