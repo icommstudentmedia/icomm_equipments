@@ -1,8 +1,8 @@
 <?php
 /**
 *   FUNCTIONS.PHP
-*	This file is the home of most back-end functions.
-*   It stores most of the functions used in other files in addition to pre-set wordpress functions.
+*	This is the model of the project.
+*   It contatins functions that deal with the application's data. Includes database connection
 *
 *	@author Isaac Andrade <isaac_nic@gmail.com>
 *	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
@@ -17,7 +17,7 @@
 *	This function connects to the mySql Database and returns a link
 *
 *	@author Ritchie Fitzgerald
-*   @return string $link (link to the database) 
+*   @return string $link (connection object to query the database) 
 *	@version 1.0
 */
 function connect_to_db()
@@ -71,6 +71,7 @@ function generate_salt()
 
 /**
  * Display the header.
+ * @author Isaac Andrade
  */
 function get_header()
 {
@@ -78,6 +79,7 @@ function get_header()
 }
 /**
  * Display the footer.
+ * @author Isaac Andrade
  */
 function get_footer()
 {
