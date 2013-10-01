@@ -85,13 +85,15 @@ if (isset($_POST['submit']))         // When they press login it runs this.
 	</body>
 </html>
 <?php
-	if (isset($_POST['addsubmit']))
+
+	if (isset($_POST['addsubmit']))          // This is where we add a New Admin.
 	{
 		$addUsername = mysqli_real_escape_string($link, $_POST['adduser']);
 		$addPassword = mysqli_real_escape_string($link, $_POST['addpassword']);
 
-		$addPassword = password_encrypt($addPassword);
+		$addPassword = password_encrypt($addPassword);   // Encrypt password. functions.php
 
+		// Add new user to database.
 		$query = "INSERT INTO admins (username, password) VALUES ('$addUsername', '$addPassword')";
 		mysqli_query($link, $query);
 	}
