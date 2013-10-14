@@ -23,9 +23,9 @@
 function connect_to_db()
 {
 	define("DB_HOST", "127.0.0.1");
-	define("DB_USER", "ritchie");
-	define("DB_PASSWORD", "!Information1");
-	define("DB_NAME", "users");
+	define("DB_USER", "");
+	define("DB_PASSWORD", "");
+	define("DB_NAME", "equip_facilities");
 
 	$link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die("Error " . mysqli_error($link));
 	return $link;

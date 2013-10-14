@@ -9,7 +9,7 @@
 	*		2. Send data to the model
 	*		3. Get data from the model
 	*
-	*	@author Isaac Andrade
+	*	@author Isaac Andrade <isaac_nic@gmail.com>
 	*	@author Guilherme Bentim <guilherme.guizmo@gmail.com>
 	*	@author Ritchie Fitzgerald <ritchiefitz1@gmail.com>
 	*
